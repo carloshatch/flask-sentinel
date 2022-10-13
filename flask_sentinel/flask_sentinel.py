@@ -41,7 +41,7 @@ class ResourceOwnerPasswordCredentials(object):
                 methods=['POST', 'GET']
             )
 
-        mongo.init_app(app, config_prefix='SENTINEL_MONGO')
+        mongo.init_app(app)
         self.mongo = mongo
         oauth.init_app(app)
         oauth._validator = MyRequestValidator()
